@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SkyCast Weather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <h1>SkyCast</h1>
+    <p>Real-Time Weather Intelligence</p>
+  </header>
+
+  <!-- SEARCH -->
+  <form class="search-box" onsubmit="event.preventDefault(); getWeather();">
+    <input
+      type="text"
+      id="cityInput"
+      placeholder="Search city..."
+      autocomplete="off"
+    />
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- AUTOCOMPLETE -->
+  <div id="suggestions" class="suggestions hidden"></div>
+
+  <!-- SEARCH HISTORY -->
+  <div id="history" class="history hidden"></div>
+
+  <!-- ERROR -->
+  <div id="error" class="error"></div>
+
+  <!-- WEATHER CARD -->
+  <div class="weather-card hidden" id="weatherCard">
+    <h2 id="city"></h2>
+
+    <img
+      id="icon"
+      class="weather-icon"
+      alt="Weather icon"
+    />
+
+    <div class="temp">
+      <span id="temp"></span>°
+    </div>
+
+    <div class="condition" id="condition"></div>
+
+    <div class="stats">
+      <div>
+        <span>Humidity</span>
+        <p id="humidity"></p>
+      </div>
+      <div>
+        <span>Wind</span>
+        <p id="wind"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
